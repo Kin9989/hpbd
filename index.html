@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="birthday-card">
+        <!-- Inner -->
+        <div class="cover-inner">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5n439L9Qd0vjVe_SJd2TteNwCAIRTXqkJXUbw6jORxlq7S1XO7NLzPRUi-RSiA3suzW8&usqp=CAU"
+                width="100%">
+        </div>
+        <!-- Outer -->
+        <div class="cover-outer">
+            <img src="https://images.esellerpro.com/3274/I/318/37/lrgscaleAO002.jpg" width="100%">
+        </div>
+        <!-- Text -->
+        <div class="text">
+            <p class="title">
+                Happy Birthday <3 <br> Thừa Khang
+            </p>
+            <p>
+                Và ngày đó em sinh ra đời, cùng ngàn vì sao lung linh tỏa sáng…
+                Cho đến bây giờ ngôi sao sáng nhất bầu trời vẫn luôn là em.
+                Chúc mừng sinh nhật của em Khangdb.
+            </p>
+            <p>Ranb Tình lớp bdiu </p>
+        </div>
+        <!-- Button -->
+
+        <button class="button" id="playButton">
+
+            <img src="./img/kem.png" alt="" srcset="" width="24" viewBox="0 0 24 24" height="24" fill="none">
+            <br class="lable">H a p p y B i r t h d a y (click here !!!)</span>
+        </button>
+    </div>
+    <!-- Audio -->
+    <audio id="audioPlayer" src="./img/hpbd.mp3"></audio>
+    <!-- Script -->
+    <script>
+        const playButton = document.getElementById('playButton');
+        const audioPlayer = document.getElementById('audioPlayer');
+        const text = document.querySelector('.text');
+
+        playButton.addEventListener('click', function () {
+            if (audioPlayer.paused) {
+                audioPlayer.play();
+                playButton.innerText = 'Happy Birthday ';
+                text.style.display = 'block';
+                playButton.style.display = 'none';
+            } else {
+                audioPlayer.pause();
+                playButton.innerText = 'Happy Birthday';
+
+
+            }
+        });
+    </script>
+</body>
+
+</html>
